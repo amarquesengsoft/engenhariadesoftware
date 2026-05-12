@@ -1,7 +1,6 @@
 #include <stdio.h>
 
-    int main()
-{
+    int main(){
 
     // Matriz que representa o tabuleiro
     int tabuleiro[10][10];
@@ -32,15 +31,7 @@
         tabuleiro[linhaHorizontal][colunaHorizontal + i] = navioHorizontal[i];
     }
 
-    // Verifica se alguma posição do navio vertical já está ocupada
-    // pelo navio horizontal
-    for (i = 0; i < 3; i++) {
-        if (tabuleiro[linhaVertical + i][colunaVertical] != 0) {
-            printf("Erro: os navios estão sobrepostos.\n");
-            return 1;
-        }
-    }
-
+   
     // Copia os valores do vetor navioVertical para o tabuleiro
     for (i = 0; i < 3; i++) {
         tabuleiro[linhaVertical + i][colunaVertical] = navioVertical[i];
@@ -59,4 +50,6 @@
     }
 
     return 0;
-}
+
+
+    }
